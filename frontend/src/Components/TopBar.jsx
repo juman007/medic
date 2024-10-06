@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const TopBar = () => {
    return (
       <div className="bg-blue-500 w-full">
-         <div className="hidden md:flex justify-between items-center w-[80%] mx-auto text-white px-5 h-8">
+         <div className="hidden  md:flex justify-between items-center w-[80%] mx-auto text-white px-5 h-8">
             {" "}
             {/* Height increased */}
             <div className="flex items-center gap-8">

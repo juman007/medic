@@ -12,6 +12,7 @@ const Navbar = () => {
 
    const handleLinkClick = () => {
       setIsMobileMenuOpen(false); // Close mobile menu on link click
+      window.scrollTo({ top: 0, behavior: "smooth" });
    };
 
    useEffect(() => {
@@ -32,7 +33,7 @@ const Navbar = () => {
          <nav
             className={`${
                isScrolled ? "top-0" : "top-8"
-            } fixed left-0 w-full bg-white shadow-lg border-b border-gray-200 z-50 transition-all duration-150 ease-in-out`}
+            } fixed left-0 w-full bg-white shadow-lg border-b border-gray-200 z-50 transition-all duration-300 ease-in-out`}
          >
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
                {/* Logo */}
@@ -84,7 +85,7 @@ const Navbar = () => {
                      </li>
                      <li>
                         <Link
-                           to="/about"
+                           to="/about" 
                            onClick={handleLinkClick} // Close menu on click
                            className="block py-2 px-4 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0"
                         >
