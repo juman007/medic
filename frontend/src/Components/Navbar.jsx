@@ -71,7 +71,7 @@ const Navbar = () => {
                   } w-full md:flex md:items-center md:w-auto transition-all ease-in-out duration-300`}
                   id="navbar-multi-level"
                >
-                  <ul className="flex flex-col md:flex-row md:space-x-6 font-medium items-center">
+                  <ul className="flex flex-col md:flex-row md:space-x-12 font-medium items-center">
                      <li>
                         <Link
                            to="/"
@@ -113,9 +113,18 @@ const Navbar = () => {
                         <Link
                            to="/contact"
                            onClick={handleLinkClick} // Close menu on click
-                           className="block py-2 px-3 text-white bg-blue-500 md:hover:bg-blue-600 md:border-0 rounded-xl"
+                           className="block py-2 px-4 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0"
                         >
                            Contact Us
+                        </Link>
+                     </li>
+                     <li>
+                        <Link
+                           to="/contact"
+                           onClick={handleLinkClick} // Close menu on click
+                           className="block py-2 px-3 text-white bg-blue-500 md:hover:bg-blue-600 md:border-0 rounded-xl"
+                        >
+                           Call Us
                         </Link>
                      </li>
                   </ul>

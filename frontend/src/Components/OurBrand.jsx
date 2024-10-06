@@ -18,84 +18,84 @@ const OurBrand = () => {
                <img
                   src={tesla}
                   alt="Tesla Logo"
-                  className="h-[50px] w-[150px]  object-contain"
+                  className="h-[50px] w-[150px]  object-contain mr-10"
                />
                <img
                   src={audi}
                   alt="Audi Logo"
-                  className="h-[76px] w-[150px] object-contain"
+                  className="h-[76px] w-[150px] object-contain mr-10"
                />
                <img
                   src={volvo}
                   alt="Volvo Logo"
-                  className=" h-[100px] w-[150px] object-contain"
+                  className=" h-[100px] w-[150px] object-contain mr-10"
                />
                <img
                   src={jaguar}
                   alt="Amazon Logo"
-                  className="h-[76px] w-[150px] object-contain"
+                  className="h-[76px] w-[150px] object-contain mr-10"
                />
                <img
                   src={nissan}
                   alt="Apple Logo"
-                  className="h-[50px] w-[150px] object-contain"
+                  className="h-[50px] w-[150px] object-contain mr-10"
                />
                <img
                   src={honda}
                   alt="Tesla Logo"
-                  className="h-[100px] w-[150px] object-contain"
+                  className="h-[100px] w-[150px] object-contain mr-10"
                />
                <img
                   src={acura}
                   alt="Tesla Logo"
-                  className="h-[76px] w-[150px] object-contain"
+                  className="h-[76px] w-[150px] object-contain mr-10"
                />
                <img
                   src={kia}
                   alt="Tesla Logo"
-                  className="h-[76px] w-[150px] object-contain"
+                  className="h-[76px] w-[150px] object-contain mr-10"
                />
 
                {/* Duplicate logos again for continuous scrolling */}
                <img
                   src={tesla}
                   alt="Tesla Logo"
-                  className="h-[50px] w-[150px]  object-contain"
+                  className="h-[50px] w-[150px]  object-contain mr-10"
                />
                <img
                   src={audi}
                   alt="Audi Logo"
-                  className="h-[76px] w-[150px] object-contain"
+                  className="h-[76px] w-[150px] object-contain mr-10"
                />
                <img
                   src={volvo}
                   alt="Volvo Logo"
-                  className=" h-[100px] w-[150px] object-contain"
+                  className=" h-[100px] w-[150px] object-contain mr-10"
                />
                <img
                   src={jaguar}
                   alt="Amazon Logo"
-                  className="h-[76px] w-[150px] object-contain"
+                  className="h-[76px] w-[150px] object-contain mr-10"
                />
                <img
                   src={nissan}
                   alt="Apple Logo"
-                  className="h-[50px] w-[150px] object-contain"
+                  className="h-[50px] w-[150px] object-contain mr-10"
                />
                <img
                   src={honda}
                   alt="Tesla Logo"
-                  className="h-[100px] w-[150px] object-contain"
+                  className="h-[100px] w-[150px] object-contain mr-10"
                />
                <img
                   src={acura}
                   alt="Tesla Logo"
-                  className="h-[76px] w-[150px] object-contain"
+                  className="h-[76px] w-[150px] object-contain mr-10"
                />
                <img
                   src={kia}
                   alt="Tesla Logo"
-                  className="h-[76px] w-[150px] object-contain"
+                  className="h-[76px] w-[150px] object-contain mr-10"
                />
             </div>
          </div>

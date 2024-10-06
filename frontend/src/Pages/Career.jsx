@@ -26,7 +26,7 @@ const data = [
 
 const Career = () => {
    return (
-      <div className="mt-28">
+      <div className="mt-28 mb-14">
          <div className="mt-10">
             <h2 className="text-4xl font-manrope text-center font-bold text-gray-900 leading-[3.25rem]">
                Career
