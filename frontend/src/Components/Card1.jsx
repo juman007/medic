@@ -110,7 +110,7 @@ const Card1 = () => {
             ))}
          </div>
          {visibleProducts < products.length && (
-            <div className="text-center mt-8">
+            <div className="text-center mt-8 mb-10">
                <button
                   className="px-6 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none"
                   onClick={handleSeeMore}
