@@ -7,18 +7,6 @@ const CompanySummary = () => {
             className="container px-5 py-10 mx-auto"
             style={{ marginTop: "-44px" }}
          >
-            <div className="mt-10">
-               <h2 className="text-4xl font-manrope text-center font-bold text-gray-900 leading-[3.25rem]">
-                  Lorem
-               </h2>
-               <div className="flex justify-center">
-                  <hr className="w-24 border-t-2 border-blue-400 mt-2 mb-4" />
-               </div>
-               <p className="text-center text-lg mb-10 text-gray-700">
-                  Discover our passion for delivering outstanding service and
-                  commitment to excellence.
-               </p>
-            </div>
             <div
                className="flex flex-wrap justify-center items-center -m-4 text-center"
                style={{ width: "80%", margin: "auto" }}
