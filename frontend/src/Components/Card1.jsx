@@ -88,7 +88,7 @@ const Card1 = () => {
                   className="group my-5 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md transform transition-all duration-500 hover:scale-105 hover:shadow-lg"
                >
                   <Link
-                     to={"#"}
+                     to={`/products/${product.id}`}
                      className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl"
                   >
                      <img
@@ -99,7 +99,9 @@ const Card1 = () => {
                   </Link>
                   <div className="mt-4 px-5 pb-5">
                      <h5 className="text-xl font-semibold tracking-tight text-slate-900">
-                        <Link to={"#"}> {product.name}</Link>
+                        <Link to={`/products/${product.id}`}>
+                           {product.name}
+                        </Link>
                      </h5>
                      <p className="text-gray-500">{product.category}</p>
                      <p className="text-lg font-bold text-green-600">
