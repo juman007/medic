@@ -14,13 +14,23 @@ const TopBar = () => {
                   {" "}
                   {/* Added gap for better spacing */}
                   <i className="fa-solid fa-envelope"></i>
-                  <span>xyz@gmail.com</span>
+                  <a
+                     href="mailto:xyz@gmail.com"
+                     className="text-white hover:underline"
+                  >
+                     xyz@gmail.com
+                  </a>
                </p>
                <p className="text-xs flex items-center gap-1">
                   {" "}
                   {/* Added gap for better spacing */}
                   <i className="fa-solid fa-phone"></i>
-                  <span>+123456789</span>
+                  <a
+                     href="tel:+123456789"
+                     className="text-white hover:underline"
+                  >
+                     +123456789
+                  </a>
                </p>
             </div>
             <div className="flex justify-end gap-x-4">
