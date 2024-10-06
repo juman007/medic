@@ -2,26 +2,30 @@ import React from "react";
 
 const CompanySummary = () => {
    return (
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font my-10 bg-[#F1F7FC]">
          <div
-            className="container px-5 py-16 mx-auto "
+            className="container px-5 py-10 mx-auto"
             style={{ marginTop: "-44px" }}
          >
-            <div className="flex flex-wrap -m-4 text-center">
-               <div className="p-4 md:w-1/4 sm:w-1/2 w-full ">
-                  <div className="border-2 border-gray-200 px-4 py-6 rounded-lg  transition-all duration-300 transform hover:scale-105">
-                     <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        className="text-indigo-500 w-12 h-12 mb-3 inline-block"
-                        viewBox="0 0 24 24"
-                     >
-                        <path d="M8 17l4 4 4-4m-4-5v9" />
-                        <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29" />
-                     </svg>
+            <div className="mt-10">
+               <h2 className="text-4xl font-manrope text-center font-bold text-gray-900 leading-[3.25rem]">
+                  Lorem
+               </h2>
+               <div className="flex justify-center">
+                  <hr className="w-24 border-t-2 border-blue-400 mt-2 mb-4" />
+               </div>
+               <p className="text-center text-lg mb-10 text-gray-700">
+                  Discover our passion for delivering outstanding service and
+                  commitment to excellence.
+               </p>
+            </div>
+            <div
+               className="flex flex-wrap justify-center items-center -m-4 text-center"
+               style={{ width: "80%", margin: "auto" }}
+            >
+               <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+                  <div className="bg-white shadow-lg px-4 py-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                     <i className="fa-solid fa-user-doctor text-5xl text-[#6366F1] mb-1"></i>
                      <h2 className="title-font font-bold text-3xl text-gray-900">
                         2.7K
                      </h2>
@@ -29,7 +33,7 @@ const CompanySummary = () => {
                   </div>
                </div>
                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                  <div className="border-2 border-gray-200 px-4 py-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  <div className="bg-white shadow-lg px-4 py-6 rounded-lg transition-all duration-300 transform hover:scale-105">
                      <svg
                         fill="none"
                         stroke="currentColor"
@@ -50,7 +54,7 @@ const CompanySummary = () => {
                   </div>
                </div>
                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                  <div className="border-2 border-gray-200 px-4 py-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  <div className="bg-white shadow-lg px-4 py-6 rounded-lg transition-all duration-300 transform hover:scale-105">
                      <svg
                         fill="none"
                         stroke="currentColor"
@@ -70,7 +74,7 @@ const CompanySummary = () => {
                   </div>
                </div>
                <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-                  <div className="border-2 border-gray-200 px-4 py-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  <div className="bg-white shadow-lg px-4 py-6 rounded-lg transition-all duration-300 transform hover:scale-105">
                      <svg
                         fill="none"
                         stroke="currentColor"

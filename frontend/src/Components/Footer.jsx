@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assets/logo.png";
 
 const Footer = () => {
    return (
@@ -8,11 +9,7 @@ const Footer = () => {
             <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-8 py-10 max-sm:max-w-sm max-sm:mx-auto gap-y-8">
                <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">
                   <a href="#" className="flex justify-center lg:justify-start">
-                     <img
-                        width={"50px"}
-                        src="https://c8.alamy.com/comp/R4FP1D/circle-letter-w-or-m-icon-or-logo-clean-and-simple-logo-template-availble-in-resizable-eps-vector-file-format-R4FP1D.jpg"
-                        alt=""
-                     />
+                     <img width={"50px"} src={logo} alt="" />
                   </a>
                   <p className="py-8 text-sm text-gray-500 lg:max-w-xs text-center lg:text-left">
                      A108 Adam Street <br />

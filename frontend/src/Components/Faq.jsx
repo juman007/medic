@@ -16,7 +16,6 @@ const Faq = () => {
                </h2>
                <div className="flex justify-center">
                   <hr className="w-32 border-t-2 border-blue-400 mt-2 mb-2" />{" "}
-                  {/* Custom top and bottom margin */}
                </div>
                <p className="text-center text-md">
                   Necessitatibus eius consequatur ex aliquid fuga eum quidem
@@ -28,18 +27,18 @@ const Faq = () => {
                {faqData.map((faq, index) => (
                   <div
                      key={index}
-                     className={`accordion py-8 px-6 border-b border-solid border-gray-200 transition-all duration-500 rounded-2xl hover:bg-indigo-50 ${
+                     className={`cursor-pointer accordion py-8 px-6 border-b border-solid border-gray-200 transition-all duration-500 rounded-2xl hover:bg-indigo-50 ${
                         openIndex === index
                            ? "accordion-active:bg-indigo-50"
                            : ""
                      }`}
+                     onClick={() => toggleAccordion(index)} // Move click handler to the div
                   >
                      <button
-                        className="accordion-toggle group inline-flex items-center justify-between leading-8 text-gray-900 w-full transition duration-500 text-left hover:text-indigo-600"
-                        onClick={() => toggleAccordion(index)} // Toggle accordion on click
+                        className="  accordion-toggle group inline-flex items-center justify-between leading-8 text-gray-900 w-full transition duration-500 text-left hover:text-indigo-600"
                         aria-controls={`basic-collapse-${index}`}
                      >
-                        <h5>{faq.question}</h5>
+                        <h5 className="font-bold">{faq.question}</h5>
                         <svg
                            className={`text-gray-500 transition duration-500 group-hover:text-indigo-600 ${
                               openIndex === index ? "rotate-180" : ""
@@ -63,7 +62,7 @@ const Faq = () => {
                         id={`basic-collapse-${index}`}
                         className={`accordion-content w-full px-0 overflow-hidden transition-all duration-500 ${
                            openIndex === index ? "max-h-40" : "max-h-0"
-                        }`} // Adjust max-height based on the state
+                        }`}
                         aria-labelledby={`basic-heading-${index}`}
                      >
                         <p className="text-base text-gray-900 leading-6">

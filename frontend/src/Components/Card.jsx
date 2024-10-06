@@ -1,6 +1,7 @@
 import React from "react";
 
 const Card = () => {
+
    return (
       <div className="w-68 h-auto flex flex-col items-start gap-1 border rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 min-h-[400px]">
          {" "}
