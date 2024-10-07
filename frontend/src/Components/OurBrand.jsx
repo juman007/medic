@@ -25,7 +25,7 @@ const OurBrand = () => {
    }, []);
 
    return (
-      <section className="bg-white dark:bg-white">
+      <section className="bg-white dark:bg-white ">
          <div className="py-8 lg:py-4 mx-auto max-w-screen-xl px-4 overflow-hidden">
             <div className="flex items-center space-x-12 animate-scroll reveal">
                {/* Use consistent size for all logos */}
