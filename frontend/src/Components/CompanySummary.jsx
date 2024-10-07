@@ -25,7 +25,7 @@ const CompanySummary = () => {
    }, []);
 
    return (
-      <section className="text-gray-600 body-font md:my-10 mt-64 bg-[#F1F7FC]">
+      <section className="text-gray-600 body-font my-10 bg-[#F1F7FC]">
          <div
             className="container px-5 py-10 mx-auto"
             style={{ marginTop: "-44px" }}

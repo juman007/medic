@@ -3,6 +3,7 @@ import WhyChooseMe from "../Components/WhyChooseMe";
 import CompanySummary from "../Components/CompanySummary";
 import OurBrand from "../Components/OurBrand";
 import OurMission from "../Components/OurMission";
+import WHy from "../Components/WHy";
 
 const AboutUs = () => {
    useEffect(() => {
@@ -10,7 +11,8 @@ const AboutUs = () => {
    }, []); // Empty dependency array means this runs only on mount
    return (
       <div className="mt-28">
-         <WhyChooseMe />
+         {/* <WhyChooseMe /> */}
+         <WHy />
          <OurMission />
          <CompanySummary />
          <OurBrand />

@@ -2,7 +2,7 @@ import React from "react";
 
 const WHy = () => {
    return (
-      <div className="mb-[1200px] md:mb-0">
+      <div className="mb-[1400px] md:mb-0">
          <div className="mt-10">
             <h2 className="reveal-heading text-4xl font-manrope text-center font-bold text-gray-900 leading-[3.25rem]">
                About Us

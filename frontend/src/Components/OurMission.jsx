@@ -2,7 +2,7 @@ import React from "react";
 
 const OurMission = () => {
    return (
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font md:-mt-16 mt-[1300px]">
          <div className="container px-5 py-20 mx-auto">
             <div className="flex flex-wrap justify-center -m-4">
                {" "}
