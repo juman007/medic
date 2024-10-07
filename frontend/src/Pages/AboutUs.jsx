@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import WhyChooseMe from "../Components/WhyChooseMe";
 import CompanySummary from "../Components/CompanySummary";
 import OurBrand from "../Components/OurBrand";
+import OurMission from "../Components/OurMission";
 
 const AboutUs = () => {
    useEffect(() => {
@@ -10,6 +11,7 @@ const AboutUs = () => {
    return (
       <div className="mt-28">
          <WhyChooseMe />
+         <OurMission />
          <CompanySummary />
          <OurBrand />
       </div>

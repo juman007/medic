@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { career } from "../assets/products";
+import { career } from "../assets/Products";
+
 import ScrollReveal from "scrollreveal";
 
 const Career = () => {

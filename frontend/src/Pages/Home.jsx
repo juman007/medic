@@ -6,6 +6,7 @@ import Card from "../Components/Card";
 import Card1 from "../Components/Card1";
 import Faq from "../Components/Faq";
 import OurBrand from "../Components/OurBrand";
+import WHy from "../Components/WHy";
 
 const Home = () => {
    useEffect(() => {
@@ -15,8 +16,10 @@ const Home = () => {
    return (
       <div>
          <Carousal />
-         <WhyChooseMe />
+         {/* <WhyChooseMe /> */}
+         <WHy />
          <CompanySummary />
+
          {/* <Card /> */}
          <Card1 />
          <Faq />

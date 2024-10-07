@@ -1,44 +1,8 @@
-import React, { useEffect } from "react";
-import ScrollReveal from "scrollreveal";
+import React from "react";
 
-const WhyChooseMe = () => {
-   useEffect(() => {
-      // Fade in effect for the heading
-      ScrollReveal().reveal(".reveal-heading", {
-         origin: "top",
-         distance: "50px",
-         duration: 1000,
-         delay: 200,
-         easing: "ease-in-out",
-         opacity: 0,
-         reset: true,
-      });
-
-      // Left image div slides in from the left
-      ScrollReveal().reveal(".reveal-left", {
-         origin: "left",
-         distance: "100px",
-         duration: 1000,
-         delay: 200,
-         easing: "ease-in-out",
-         opacity: 0,
-         reset: true,
-      });
-
-      // Right text div slides in from the right
-      ScrollReveal().reveal(".reveal-right", {
-         origin: "right",
-         distance: "100px",
-         duration: 1000,
-         delay: 200,
-         easing: "ease-in-out",
-         opacity: 0,
-         reset: true,
-      });
-   }, []);
-
+const WHy = () => {
    return (
-      <section className="text-gray-600 body-font">
+      <div className="mb-[1200px] md:mb-0">
          <div className="mt-10">
             <h2 className="reveal-heading text-4xl font-manrope text-center font-bold text-gray-900 leading-[3.25rem]">
                About Us
@@ -51,26 +15,18 @@ const WhyChooseMe = () => {
                commitment to excellence.
             </p>
          </div>
-         <div
-            className="container mx-auto flex px-5 py-20 gap-10 md:flex-row flex-col items-start"
-            style={{ width: "80%", margin: "auto", marginTop: "-60px" }}
-         >
-            <div
-               className="reveal-left lg:max-w-lg lg:w-full md:w-1/2 w-full"
-               style={{ height: "50vh", flex: 1 }}
-            >
+
+         <div className="flex flex-col md:flex-row w-[80%] m-auto mb-20 h-[460px] justify-start items-center ">
+            <div className="md:w-2/6 mb-8 md:mb-0 h-full ">
                <img
-                  className="object-cover object-center rounded-lg shadow-lg"
-                  alt="hero"
+                  className="shadow-lg rounded-xl h-full  w-[500px] md:w-[360px] object-cover"
                   src="https://images.pexels.com/photos/7579828/pexels-photo-7579828.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  style={{ height: "100%", width: "100%", objectFit: "cover" }}
+                  alt=""
                />
             </div>
-            <div
-               className="reveal-right lg:flex-grow md:w-1/2 w-full flex flex-col md:items-start md:text-left items-start justify-start"
-               style={{ flex: 1 }}
-            >
-               <p className="mb-8 leading-relaxed text-gray-800 text-sm">
+            <div className="md:w-4/6">
+               <p className="text-justify">
+                  {" "}
                   Toyenbee Pharma Pvt Ltd, a pharmaceutical company committed to
                   providing quality medicines at affordable prices, embarks on a
                   new chapter of growth and success as we transition from a
@@ -109,8 +65,8 @@ const WhyChooseMe = () => {
                </p>
             </div>
          </div>
-      </section>
+      </div>
    );
 };
 
-export default WhyChooseMe;
+export default WHy;
