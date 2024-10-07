@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { faqData } from "../assets/Products";
+import ScrollReveal from "scrollreveal";
 
 const Faq = () => {
    const [openIndex, setOpenIndex] = useState(null); // State to track the open accordion index
@@ -7,17 +9,40 @@ const Faq = () => {
       setOpenIndex(openIndex === index ? null : index); // Toggle the accordion state
    };
 
+   useEffect(() => {
+      // Initialize ScrollReveal for the accordion and heading
+      ScrollReveal().reveal(".reveal", {
+         origin: "top", // Animation starts from the top
+         distance: "30px", // Distance to travel during animation
+         duration: 1000, // Animation duration (1 second)
+         delay: 200, // Delay before the animation starts
+         easing: "ease-in-out",
+         opacity: 0, // Start with opacity 0
+         reset: true, // Reset animation on scroll
+      });
+
+      ScrollReveal().reveal(".accordion-group", {
+         origin: "bottom", // Animation for the accordion group starts from the bottom
+         distance: "30px", // Distance to travel during animation
+         duration: 1000, // Animation duration (1 second)
+         delay: 300, // Slight delay for the accordion group
+         easing: "ease-in-out",
+         opacity: 0, // Start with opacity 0
+         reset: true, // Reset animation on scroll
+      });
+   }, []);
+
    return (
       <section className="py-16 bg-[#F1F7FC]">
          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mb-16">
-               <h2 className="text-4xl font-manrope text-center font-bold text-gray-900 leading-[3.25rem]">
+               <h2 className="reveal text-4xl font-manrope text-center font-bold text-gray-900 leading-[3.25rem]">
                   Frequently Asked Questions
                </h2>
                <div className="flex justify-center">
-                  <hr className="w-32 border-t-2 border-blue-400 mt-2 mb-2" />{" "}
+                  <hr className="w-32 border-t-2 border-blue-400 mt-2 mb-2 reveal" />{" "}
                </div>
-               <p className="text-center text-md">
+               <p className="reveal text-center text-md">
                   Necessitatibus eius consequatur ex aliquid fuga eum quidem
                   sint consectetur velit
                </p>
@@ -32,10 +57,10 @@ const Faq = () => {
                            ? "accordion-active:bg-indigo-50"
                            : ""
                      }`}
-                     onClick={() => toggleAccordion(index)} // Move click handler to the div
+                     onClick={() => toggleAccordion(index)}
                   >
                      <button
-                        className="  accordion-toggle group inline-flex items-center justify-between leading-8 text-gray-900 w-full transition duration-500 text-left hover:text-indigo-600"
+                        className="accordion-toggle group inline-flex items-center justify-between leading-8 text-gray-900 w-full transition duration-500 text-left hover:text-indigo-600"
                         aria-controls={`basic-collapse-${index}`}
                      >
                         <h5 className="font-bold">{faq.question}</h5>
@@ -76,29 +101,5 @@ const Faq = () => {
       </section>
    );
 };
-
-// Sample FAQs data
-const faqData = [
-   {
-      question: "How do I update my billing information?",
-      answer:
-         "To update your billing information, go to your account settings and look for the billing section to make changes.",
-   },
-   {
-      question: "How can I contact customer support?",
-      answer:
-         'To contact customer support, look for a "Contact us" or "Help" button or link on the website or platform. You may be able to email, call, or chat with customer support for assistance.',
-   },
-   {
-      question: "How do I update my profile information?",
-      answer:
-         "To update your profile information, log in to your account and navigate to the profile settings section.",
-   },
-   {
-      question: "How do I find my purchase history?",
-      answer:
-         'You can find your purchase history in the order section of your account. Look for a "Purchase History" or "Orders" tab.',
-   },
-];
 
 export default Faq;

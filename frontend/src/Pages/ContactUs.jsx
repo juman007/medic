@@ -1,17 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 
 const ContactUs = () => {
+   useEffect(() => {
+      // Initialize ScrollReveal
+      ScrollReveal().reveal(".reveal", {
+         origin: "bottom", // Animation starts from the bottom
+         distance: "50px", // Distance to travel during animation
+         duration: 1000, // Animation duration (1 second)
+         delay: 200, // Delay before the animation starts
+         easing: "ease-in-out",
+         reset: true, // If true, animation resets every time the element scrolls into view
+      });
+   }, []);
+
+   useEffect(() => {
+      window.scrollTo(0, 0); // Scroll to the top of the page
+   }, []); // Empty dependency array means this runs only on mount
+
    return (
       <div className="mt-14">
          <section className="bg-white" id="contact">
             <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
                <div className="mb-4">
-                  <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
+                  <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12 reveal">
                      <h2 className="font-heading mb-4 font-bold tracking-tight text-black text-3xl sm:text-5xl">
                         Contact Us
                      </h2>
                      <hr className="w-24 m-auto border-t-2 border-blue-400 mt-2 mb-4" />
-
                      <p className="mx-auto mt-4 max-w-3xl text-xl text-black">
                         In hac habitasse platea dictumst
                      </p>
@@ -19,7 +35,7 @@ const ContactUs = () => {
                </div>
 
                {/* Google Map */}
-               <div className="mb-6">
+               <div className="mb-6 reveal">
                   <iframe
                      title="Google Map"
                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509105!2d144.95373531531853!3d-37.81720997975111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f5eb5c3%3A0x50f0abec5e6e6c81!2sYour%20Address%20Here!5e0!3m2!1sen!2sau!4v1620952743072!5m2!1sen!2sau"
@@ -31,7 +47,7 @@ const ContactUs = () => {
                   />
                </div>
 
-               <div className="flex items-stretch justify-center">
+               <div className="flex items-stretch justify-center reveal">
                   <div className="grid md:grid-cols-2">
                      <div className="h-full pr-6 ">
                         <p className="mt-3 mb-12 text-lg text-black ">
@@ -133,13 +149,14 @@ const ContactUs = () => {
                         </ul>
                      </div>
                      <div
-                        className="card h-fit max-w-6xl p-5 md:p-12"
+                        className="card h-fit max-w-6xl p-5 md:p-12 reveal"
                         id="form"
                      >
                         <h2 className="mb-4 text-2xl font-bold text-black">
                            Ready to Get Started?
                         </h2>
                         <form id="">
+                           {/* Form Fields */}
                            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                               <div>
                                  <label
@@ -226,10 +243,9 @@ const ContactUs = () => {
                                  className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md text-black"
                               />
                            </div>
-
                            <button
                               type="submit"
-                              className="mt-4 rounded bg-blue-900 py-3 px-8 text-sm font-semibold uppercase text-white shadow-md transition duration-300 hover:bg-blue-800 focus:outline-none"
+                              className="mt-4 rounded bg-indigo-600  py-3 px-8 text-sm font-semibold uppercase text-white shadow-md transition duration-300 hover:bg-blue-800 focus:outline-none"
                            >
                               Send
                            </button>

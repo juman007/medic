@@ -1,6 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 
 const CompanySummary = () => {
+   useEffect(() => {
+      // Initialize ScrollReveal for left elements
+      ScrollReveal().reveal(".reveal-left", {
+         origin: "left", // Animation starts from the left
+         distance: "100px", // Distance to travel during animation
+         duration: 1000, // Animation duration (1 second)
+         delay: 200, // Delay before the animation starts
+         easing: "ease-in-out",
+         reset: true, // Animation resets every time the element scrolls into view
+      });
+
+      // Initialize ScrollReveal for right elements
+      ScrollReveal().reveal(".reveal-right", {
+         origin: "right", // Animation starts from the right
+         distance: "100px", // Distance to travel during animation
+         duration: 1000, // Animation duration (1 second)
+         delay: 200, // Delay before the animation starts
+         easing: "ease-in-out",
+         reset: true, // Animation resets every time the element scrolls into view
+      });
+   }, []);
+
    return (
       <section className="text-gray-600 body-font my-10 bg-[#F1F7FC]">
          <div
@@ -11,7 +34,7 @@ const CompanySummary = () => {
                className="flex flex-wrap justify-center items-center -m-4 text-center"
                style={{ width: "80%", margin: "auto" }}
             >
-               <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+               <div className="p-4 md:w-1/4 sm:w-1/2 w-full reveal-left">
                   <div className="bg-white shadow-lg px-4 py-6 rounded-lg transition-all duration-300 transform hover:scale-105">
                      <i className="fa-solid fa-user-doctor text-5xl text-[#6366F1] mb-1"></i>
                      <h2 className="title-font font-bold text-3xl text-gray-900">
@@ -20,7 +43,7 @@ const CompanySummary = () => {
                      <p className="leading-relaxed font-bold">Doctors</p>
                   </div>
                </div>
-               <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+               <div className="p-4 md:w-1/4 sm:w-1/2 w-full reveal-right">
                   <div className="bg-white shadow-lg px-4 py-6 rounded-lg transition-all duration-300 transform hover:scale-105">
                      <svg
                         fill="none"
@@ -41,7 +64,7 @@ const CompanySummary = () => {
                      <p className="leading-relaxed font-bold">Departments</p>
                   </div>
                </div>
-               <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+               <div className="p-4 md:w-1/4 sm:w-1/2 w-full reveal-left">
                   <div className="bg-white shadow-lg px-4 py-6 rounded-lg transition-all duration-300 transform hover:scale-105">
                      <svg
                         fill="none"
@@ -61,7 +84,7 @@ const CompanySummary = () => {
                      <p className="leading-relaxed font-bold">Research Labs</p>
                   </div>
                </div>
-               <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
+               <div className="p-4 md:w-1/4 sm:w-1/2 w-full reveal-right">
                   <div className="bg-white shadow-lg px-4 py-6 rounded-lg transition-all duration-300 transform hover:scale-105">
                      <svg
                         fill="none"

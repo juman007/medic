@@ -33,11 +33,15 @@ const Navbar = () => {
          <nav
             className={`${
                isScrolled ? "top-0" : "top-8"
-            } fixed left-0 w-full bg-white shadow-lg border-b border-gray-200 z-50 transition-all duration-300 ease-in-out`}
+            } fixed left-0 w-full bg-white shadow-lg border-b border-gray-200 z-50 transition-all duration-150 ease-in-out`}
          >
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
                {/* Logo */}
-               <Link to="/" className="flex items-center space-x-3">
+               <Link
+                  to="/"
+                  onClick={() => scrollTo(0, 0)}
+                  className="flex items-center space-x-3"
+               >
                   <img src={logo} className="max-w-[40px] h-auto" alt="Logo" />
                </Link>
                {/* Mobile Menu Button */}
@@ -85,7 +89,7 @@ const Navbar = () => {
                      </li>
                      <li>
                         <Link
-                           to="/about" 
+                           to="/about"
                            onClick={handleLinkClick} // Close menu on click
                            className="block py-2 px-4 text-gray-800 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0"
                         >
@@ -123,7 +127,7 @@ const Navbar = () => {
                         <Link
                            to="/contact"
                            onClick={handleLinkClick} // Close menu on click
-                           className="block py-2 px-3 text-white bg-blue-500 md:hover:bg-blue-600 md:border-0 rounded-xl"
+                           className="block py-2 px-3 text-white bg-indigo-600  md:hover:bg-indigo-800  md:border-0 rounded-xl"
                         >
                            Call Us
                         </Link>

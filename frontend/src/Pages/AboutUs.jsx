@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import WhyChooseMe from "../Components/WhyChooseMe";
 import CompanySummary from "../Components/CompanySummary";
 import OurBrand from "../Components/OurBrand";
 
 const AboutUs = () => {
+   useEffect(() => {
+      window.scrollTo(0, 0); // Scroll to the top of the page
+   }, []); // Empty dependency array means this runs only on mount
    return (
       <div className="mt-28">
          <WhyChooseMe />

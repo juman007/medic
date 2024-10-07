@@ -1,33 +1,36 @@
-import React from "react";
-import downloadPdf from "../assets/dummy.pdf";
-
-const data = [
-   {
-      slNo: 1,
-      subject: "Dummy Subject",
-      pdfLink: downloadPdf,
-   },
-   {
-      slNo: 2,
-      subject: "Dummy Subject",
-      pdfLink: downloadPdf,
-   },
-   {
-      slNo: 3,
-      subject: "Dummy Subject",
-      pdfLink: downloadPdf,
-   },
-   {
-      slNo: 4,
-      subject: "Dummy Subject",
-      pdfLink: downloadPdf,
-   },
-];
+import React, { useEffect } from "react";
+import { career } from "../assets/products";
+import ScrollReveal from "scrollreveal";
 
 const Career = () => {
+   useEffect(() => {
+      // Initialize ScrollReveal
+      ScrollReveal().reveal(".reveal", {
+         origin: "top", // Animation starts from the top
+         distance: "50px", // Distance to travel during animation
+         duration: 1000, // Animation duration (1 second)
+         delay: 200, // Delay before the animation starts
+         easing: "ease-in-out",
+         reset: true, // If true, animation resets every time the element scrolls into view
+      });
+
+      ScrollReveal().reveal(".table-reveal", {
+         origin: "bottom", // Animation starts from the bottom for the table
+         distance: "50px",
+         duration: 1000,
+         delay: 300,
+         easing: "ease-in-out",
+         reset: true,
+      });
+   }, []);
+
+   useEffect(() => {
+      window.scrollTo(0, 0); // Scroll to the top of the page
+   }, []); // Empty dependency array means this runs only on mount
+
    return (
       <div className="mt-28 mb-14">
-         <div className="mt-10">
+         <div className="mt-10 reveal">
             <h2 className="text-4xl font-manrope text-center font-bold text-gray-900 leading-[3.25rem]">
                Career
             </h2>
@@ -41,7 +44,7 @@ const Career = () => {
          </div>
          <div className="w-[80%] m-auto">
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-               <table className="w-full text-sm rtl:text-right text-black">
+               <table className="w-full text-sm rtl:text-right text-black table-reveal">
                   <thead className="text-xs text-white font-bold uppercase bg-blue-500">
                      <tr>
                         <th scope="col" className="pl-8 pr-4 py-3 text-left">
@@ -56,7 +59,7 @@ const Career = () => {
                      </tr>
                   </thead>
                   <tbody>
-                     {data.map((item, index) => (
+                     {career.map((item, index) => (
                         <tr
                            key={item.slNo}
                            className={`border-b border-gray-300 ${

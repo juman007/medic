@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
+   useEffect(() => {
+      window.scrollTo(0, 0); // Scroll to the top of the page
+   }, []); // Empty dependency array means this runs only on mount
+
    return (
       <section className="bg-white mt-32">
          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
