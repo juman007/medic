@@ -1,6 +1,64 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 
 const WHy = () => {
+   useEffect(() => {
+      // Fade in effect for the heading
+      ScrollReveal().reveal(".reveal-heading", {
+         origin: "top",
+         distance: "50px",
+         duration: 1000,
+         delay: 200,
+         easing: "ease-in-out",
+         opacity: 0,
+         reset: true,
+      });
+
+      // Left image div slides in from the left
+      ScrollReveal().reveal(".reveal-left", {
+         origin: "left",
+         distance: "100px",
+         duration: 1000,
+         delay: 200,
+         easing: "ease-in-out",
+         opacity: 0,
+         reset: true,
+      });
+
+      // Right text div slides in from the right
+      ScrollReveal().reveal(".reveal-right", {
+         origin: "right",
+         distance: "100px",
+         duration: 1000,
+         delay: 200,
+         easing: "ease-in-out",
+         opacity: 0,
+         reset: true,
+      });
+
+      // Additional left fade-in effect
+      ScrollReveal().reveal(".fade-left", {
+         origin: "left",
+         distance: "50px",
+         duration: 1000,
+         delay: 300,
+         easing: "ease-in-out",
+         opacity: 0,
+         reset: true,
+      });
+
+      // Additional right fade-in effect
+      ScrollReveal().reveal(".fade-right", {
+         origin: "right",
+         distance: "50px",
+         duration: 1000,
+         delay: 300,
+         easing: "ease-in-out",
+         opacity: 0,
+         reset: true,
+      });
+   }, []);
+
    return (
       <div className="mb-[1400px] md:mb-0">
          <div className="mt-10">
@@ -16,17 +74,16 @@ const WHy = () => {
             </p>
          </div>
 
-         <div className="flex flex-col md:flex-row w-[80%] m-auto mb-20 h-[460px] justify-start items-center ">
-            <div className="md:w-2/6 mb-8 md:mb-0 h-full ">
+         <div className="flex flex-col md:flex-row w-[80%] m-auto mb-20 h-[460px] justify-start items-center">
+            <div className="md:w-2/6 mb-8 md:mb-0 h-full fade-left">
                <img
-                  className="shadow-lg rounded-xl h-full  w-[500px] md:w-[360px] object-cover"
+                  className="shadow-lg rounded-xl h-full w-[500px] md:w-[360px] object-cover"
                   src="https://images.pexels.com/photos/7579828/pexels-photo-7579828.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt=""
                />
             </div>
-            <div className="md:w-4/6">
+            <div className="md:w-4/6 fade-right">
                <p className="text-justify">
-                  {" "}
                   Toyenbee Pharma Pvt Ltd, a pharmaceutical company committed to
                   providing quality medicines at affordable prices, embarks on a
                   new chapter of growth and success as we transition from a
