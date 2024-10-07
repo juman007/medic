@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import { asstes } from "../assets/Products";
 
 const Navbar = () => {
    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,9 +31,9 @@ const Navbar = () => {
    return (
       <div>
          <nav
-            className={`${
-               isScrolled ? "top-0" : "top-8"
-            } fixed left-0 w-full bg-white shadow-lg border-b border-gray-200 z-50 transition-all duration-150 ease-in-out`}
+            className={`fixed left-0 w-full bg-white shadow-lg border-b border-gray-200 z-50 transition-all duration-150 ease-in-out ${
+               isScrolled ? "md:top-0 top-0" : "md:top-8 top-0"
+            }`}
          >
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
                {/* Logo */}
@@ -42,7 +42,11 @@ const Navbar = () => {
                   onClick={() => scrollTo(0, 0)}
                   className="flex items-center space-x-3"
                >
-                  <img src={logo} className="max-w-[40px] h-auto" alt="Logo" />
+                  <img
+                     src={asstes.logo}
+                     className="max-w-[50px] h-auto"
+                     alt="Logo"
+                  />
                </Link>
                {/* Mobile Menu Button */}
                <button
@@ -61,6 +65,7 @@ const Navbar = () => {
                      viewBox="0 0 24 24"
                      stroke="currentColor"
                      strokeWidth={2}
+                     style={{ width: "40px", marginRight: "39px" }}
                   >
                      <path
                         strokeLinecap="round"

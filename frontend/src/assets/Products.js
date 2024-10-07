@@ -1,4 +1,9 @@
 import downloadPdf from "../assets/dummy.pdf";
+import logo from "../assets/logo_medic.png";
+
+export const asstes = {
+   logo,
+};
 
 export const products = [
    {
